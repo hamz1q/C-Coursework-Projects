@@ -1,0 +1,27 @@
+
+
+/*
+
+
+*/
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+using namespace std;
+const int MAXSIZE = 100;
+cout << "Welcome to escalators!" << endl;
+cout << endl;
+loadFile(file, firstWord, secondWord, thirdWord);
+string finalArray[3] = {firstWord, secondWord, thirdWord};
+
+countLetters(finalArray);
+// cout << lenOne << endl << lenTwo << endl << lenThree << endl;
+
+return 0;
+}
+
+void loadFile(s}
+  

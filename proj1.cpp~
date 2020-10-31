@@ -1,0 +1,73 @@
+
+
+/*
+
+
+*/
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+using namespace std;
+const int MAXSIZE = 100;
+// const int MAXCHAR = 6;
+// const int MIDSIZE = 5; 
+// const int MINSIZE = 4;
+
+void loadFile(string file, char first[MAXSIZE],char second[MAXSIZE],char third[MAXSIZE]);
+void countLetters(string arry[3]);
+
+int main(){
+  
+  char firstWord[MAXSIZE] = {'\0'};
+  char secondWord[MAXSIZE] = {'\0'};
+  char thirdWord[MAXSIZE] = {'\0'};
+  //  int lenOne = 0;
+  //  int lenTwo = 0;
+  //  int lenThree = 0;
+  
+  string file;
+
+  cout << "Welcome to escalators!" << endl;
+  cout << endl;
+  loadFile(file, firstWord, secondWord, thirdWord);
+  char finalArray[3] = {firstWord, secondWord, thirdWord};
+  
+  countLetters(finalArray);
+  // cout << lenOne << endl << lenTwo << endl << lenThree << endl;
+  
+  return 0;
+}
+
+void loadFile(string file, char first[MAXSIZE], char second[MAXSIZE], char third[MAXSIZE]){
+  ifstream myFile;
+  cout << "Enter a file:" << endl;
+  cin >> file;
+  myFile.open(file);
+
+  if(myFile.is_open()){
+    
+    myFile >> first;
+    myFile >> second;
+    myFile >> third;
+    
+  }
+  else{
+    cout << "No file found." << endl;
+  }
+
+  
+  myFile.close();
+}
+
+void countLetters(string arry[3]){
+
+  //  lenOne = sizeof arry[0];
+  //  lenTwo = sizeof arry[1];
+  //  lenThree = sizeof arry[2];
+
+  cout << arry[0] << endl;
+  
+}
